@@ -19,7 +19,7 @@ Author: Eric Bidelman (ebidel@)
 <html>
 <head>
   <title>Select-y</title>
-  <script async>
+  <script>
     var script = document.createElement('script');
 
     if (location.pathname.match(/components/)) {
@@ -38,7 +38,10 @@ Author: Eric Bidelman (ebidel@)
   <link rel="import" href="selecty.html">
   <style>
     body {
-      background: #fff !important;
+      background: #fff;
+    }
+    body[unresolved] {
+      opacity: 0;
     }
     select-y {
       position: absolute;
