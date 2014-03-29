@@ -19,15 +19,20 @@ Author: Eric Bidelman (ebidel@)
 <html>
 <head>
   <title>Select-y</title>
-  <script src="bower_components/platform/platform.js"></script>
   <script async>
-    if (!location.pathname.match(/components/)) {
-      var link = document.createElement('link');
-      link.rel = 'import';
+    var script = document.createElement('script');
+    var link = document.createElement('link');
+    link.rel = 'import';
+    link.async = true;
+
+    if (location.pathname.match(/components/)) {
+      script.src = '../platform/platform.js';
+    } else {
+      script.src = 'bower_components/platform/platform.js';
       link.href = 'bower_components/polymer/polymer.html';
-      link.async = true;
-      document.head.appendChild(link);
     }
+    document.head.appendChild(link);
+    document.head.appendChild(script);
   </script>
   <link rel="import" href="selecty.html">
   <style>
