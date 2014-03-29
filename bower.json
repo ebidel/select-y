@@ -1,0 +1,23 @@
+{
+  "name": "select-y",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ebidel/select-y",
+  "authors": [
+    "Eric Bidelman <ebidel@gmail.com>"
+  ],
+  "description": "Clippy-like helper :)",
+  "keywords": [
+    "web-components"
+  ],
+  "license": "Apache2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.2.1"
+  }
+}

@@ -1,0 +1,135 @@
+@-webkit-keyframes jitter {
+  /* line 4, selecty.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 7, selecty.scss */
+  2% {
+    -webkit-transform: rotate(-7deg) translateX(2px) scale(1.1);
+  }
+
+  /* line 10, selecty.scss */
+  4% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 13, selecty.scss */
+  6% {
+    -webkit-transform: rotate(7deg) translateX(-2px);
+  }
+
+  /* line 16, selecty.scss */
+  8% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 19, selecty.scss */
+  10% {
+    -webkit-transform: rotate(-7deg) translateX(2px) scale(1.1);
+  }
+
+  /* line 22, selecty.scss */
+  12% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  /* line 25, selecty.scss */
+  14% {
+    -webkit-transform: rotate(7deg) translateX(-2px);
+  }
+
+  /* line 28, selecty.scss */
+  16% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+/* line 37, selecty.scss */
+.jitter, .selecty img {
+  -webkit-animation-name: jitter;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-iteration-count: infinite;
+}
+
+/* line 57, selecty.scss */
+.selecty .rectangle-speech-border {
+  border: 2px solid #222222;
+  border-radius: 20px;
+}
+/* line 62, selecty.scss */
+.selecty .rectangle-speech-border:before, .selecty .rectangle-speech-border:after {
+  display: block;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  bottom: -34px;
+  right: 60px;
+  height: 30px;
+  border-color: #222222;
+  border-style: solid;
+  background: transparent;
+  margin: 0;
+}
+/* line 76, selecty.scss */
+.selecty .rectangle-speech-border:before {
+  width: 50px;
+  border-width: 0 0 2px 2px;
+  border-bottom-left-radius: 80px 50px;
+  background: #ffffcc;
+}
+/* line 86, selecty.scss */
+.selecty .rectangle-speech-border:after {
+  width: 20px;
+  border-width: 0 0 2px 2px;
+  border-bottom-left-radius: 40px 50px;
+  background: white;
+}
+/* line 95, selecty.scss */
+.selecty .rectangle-speech-border > :first-child {
+  margin: 0;
+}
+/* line 108, selecty.scss */
+.selecty .rectangle-speech-border > :first-child:after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  right: 82px;
+  width: 28px;
+  height: 15px;
+  background: #ffffcc;
+}
+/* line 120, selecty.scss */
+.selecty q {
+  background-color: #ffffcc;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid #222;
+  display: inline-block;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 50%;
+  position: relative;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: opacity 600ms ease-in-out;
+  -moz-transition: opacity 600ms ease-in-out;
+  -o-transition: opacity 600ms ease-in-out;
+  transition: opacity 600ms ease-in-out;
+}
+/* line 141, selecty.scss */
+.selecty img {
+  height: 75px;
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+}
+/* line 148, selecty.scss */
+.selecty img + q {
+  opacity: 1;
+}
